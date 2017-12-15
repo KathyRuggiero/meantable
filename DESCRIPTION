@@ -1,9 +1,25 @@
-Package: meantable
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-Depends: R (>= 3.4.3)
-License: What license is it under?
-Encoding: UTF-8
-LazyData: true
+Package: ruggi
+Type: Package
+Title: Handy functions
+Version: 0.1
+Date: 2016-03-17
+Author: Kathy Ruggiero
+Maintainer: Kathy Ruggiero <k.ruggiero@auckland.ac.nz>
+Description: Handy functions for manipulating, summarising and plotting data.
+Depends:
+    R (>= 3.0.1),
+    ggplot2,
+    predictmeans,
+    reshape
+Imports:
+    grid,
+    lme4,
+    nlme,
+    stats
+License: GPL-3
+LazyData: FALSE
+RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown,
+    kableExtra
+VignetteBuilder: knitr
