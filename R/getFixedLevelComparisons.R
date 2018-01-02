@@ -21,8 +21,8 @@
 #' comparisons which differ by exactly one factor level.
 #'
 #' @seealso \code{\link[predictmeans]{predictmeans}}
-#' @seealso \code{\link[ruggi]{makeSummaryTable}}
-#' @seealso \code{\link[ruggi]{makeComparisonNames}}
+#' @seealso \code{\link[meantable]{makeSummaryTable}}
+#' @seealso \code{\link[meantable]{makeComparisonNames}}
 #' @export
 #' @examples
 #' library(predictmeans)
