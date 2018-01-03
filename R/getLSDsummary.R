@@ -29,11 +29,8 @@
 #' names.
 #'
 #' @export
-#' @importFrom nlme lme
-#' @importFrom lme4 lmer
-#' @importFrom predictmeans predictmeans
-#' @importFrom reshape melt
-#' @importFrom reshape cast
+#' @importFrom stats as.formula
+#' @importFrom reshape melt cast
 #' @examples
 #' library(nlme)
 #' library(predictmeans)

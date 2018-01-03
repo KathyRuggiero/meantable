@@ -56,7 +56,6 @@ This function is a wrapper to generate side-by-side boxplots for either a single
 or a pair of factors.
 }
 \examples{
-library(ggplot2)
 
 # With default axis and tick mark label font sizes
 data(crdData)

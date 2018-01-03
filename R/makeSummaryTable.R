@@ -47,10 +47,8 @@
 #' and upper pairwise confidence limits and p-value.
 #' @seealso \code{\link[predictmeans]{predictmeans}}, \link{makeComparisonNames}
 #' @author Kathy Ruggiero
+#' @importFrom stats qt
 #' @export
-#' @importFrom nlme lme
-#' @importFrom lme4 lmer
-#' @importFrom predictmeans predictmeans
 #' @examples
 #' library(predictmeans)
 #' library(nlme)
@@ -113,8 +111,9 @@ makeSummaryTable <- function(pm, model.term, wald.tab, alpha, digits=c(3,4), eps
     meandiffs.mat <- outer(pm[[1]], pm[[1]], "-")
     LSD.mat[upper.tri(LSD.mat)] <- meandiffs.mat[upper.tri(meandiffs.mat)]
 
+  } else {
+    stop("Error in predictmeans or alldiffs list.")
   }
-  else stop("Error in predictmeans or alldiffs list.")
 
   # Get names of comparisons
   compNames <- makeComparisonNames(pVal.mat)

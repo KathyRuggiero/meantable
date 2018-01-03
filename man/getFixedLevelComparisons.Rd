@@ -50,9 +50,9 @@ oats.tab[rowsKeep,]
 \seealso{
 \code{\link[predictmeans]{predictmeans}}
 
-\code{\link[ruggi]{makeSummaryTable}}
+\code{\link[meantable]{makeSummaryTable}}
 
-\code{\link[ruggi]{makeComparisonNames}}
+\code{\link[meantable]{makeComparisonNames}}
 }
 \author{
 Katya Ruggiero

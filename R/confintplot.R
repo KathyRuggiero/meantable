@@ -52,8 +52,11 @@
 #' @seealso \code{\link[ggplot2]{geom_errorbar}} \code{\link[ggplot2]{aes_string}}
 #' @seealso \code{\link[ggplot2]{facet_wrap}}
 #' @export
-#' @import ggplot2
-#' @import stats
+#' @importFrom ggplot2 aes_string element_blank element_text facet_grid
+#'                     geom_errorbar geom_hline geom_point ggplot
+#'                     guide_legend guides scale_fill_manual theme theme_bw
+#'                     xlab ylab
+#' @importFrom stats qt relevel reformulate
 #' @examples
 #' library(ggplot2)
 #' # Means with 95% CI error bars

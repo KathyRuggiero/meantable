@@ -62,7 +62,7 @@ oats.tab <- makeSummaryTable(pm)
 comparisonNames2df(oats.tab[,1], split.at = ":", varNames = c("nitro", "Variety") )
 }
 \seealso{
-\code{\link[ruggi]{makeComparisonNames}}
+\code{\link[meantable]{makeComparisonNames}}
 }
 \author{
 Katya Ruggiero

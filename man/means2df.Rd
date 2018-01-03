@@ -46,7 +46,7 @@ means2df(fruitfly.pm, digits=2)
 data(bugs)
 bugs$logBaseline <- log(bugs$Baseline + 1)
 var.mat <- with(bugs, tapply(logBaseline, list(State, Bacteria), var))
-var.df <- melt(var.mat)
+var.df <- reshape::melt(var.mat)
 names(var.df) <- c("State", "Bacteria", "Var")
 newbugs <- merge(bugs, var.df)
 newbugs$Weight <- 1/newbugs$Var

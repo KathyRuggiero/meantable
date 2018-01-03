@@ -35,11 +35,12 @@
 #' @param yStripTextSize y strip text size in pts
 #' @param legendKeyWidth width of legend key in cms
 #'
-#' @export
-#' @importFrom nlme lme
-#' @importFrom lme4 lmer
-#' @importFrom predictmeans predictmeans
+#' @importFrom stats reformulate
+#' @importFrom ggplot2 aes_string element_blank element_text facet_grid
+#'             geom_line geom_point ggplot scale_x_continuous theme theme_bw
+#'             unit xlab ylab
 #' @importFrom reshape melt
+#' @export
 #' @examples
 #' #' # fruitfly data: factorial with added control
 #' data(fruitfly)

@@ -15,13 +15,9 @@
 #' for the minimum mean for each factorial treatment combination given by the levels of the factors
 #' in \code{eqLevelFactors}.
 #' @author Katya Ruggiero
-#' @details
 #' @export
-#' @importFrom nlme lme
-#' @importFrom lme4 lmer
-#' @importFrom predictmeans predictmeans
-#' @importFrom reshape melt
-#' @importFrom reshape cast
+#' @importFrom stats as.formula
+#' @importFrom reshape melt cast
 #' @examples
 #' library(nlme)
 #' library(predictmeans)

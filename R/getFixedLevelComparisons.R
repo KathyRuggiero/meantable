@@ -23,6 +23,7 @@
 #' @seealso \code{\link[predictmeans]{predictmeans}}
 #' @seealso \code{\link[meantable]{makeSummaryTable}}
 #' @seealso \code{\link[meantable]{makeComparisonNames}}
+#' @importFrom Matrix diag
 #' @export
 #' @examples
 #' library(predictmeans)

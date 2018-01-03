@@ -19,10 +19,6 @@
 #' @details This function assumes that the list supplied to the \code{data} argument was generated
 #' by the \link{predictmeans} function in the \code{predictmeans} package.
 #' @export
-#' @importFrom nlme lme
-#' @importFrom lme4 lmer
-#' @importFrom reshape melt
-#' @importFrom predictmeans predictmeans
 #' @examples
 #' data(fruitfly)
 #' # fit model for factorial experiment with added control
@@ -37,7 +33,7 @@
 #' data(bugs)
 #' bugs$logBaseline <- log(bugs$Baseline + 1)
 #' var.mat <- with(bugs, tapply(logBaseline, list(State, Bacteria), var))
-#' var.df <- melt(var.mat)
+#' var.df <- reshape::melt(var.mat)
 #' names(var.df) <- c("State", "Bacteria", "Var")
 #' newbugs <- merge(bugs, var.df)
 #' newbugs$Weight <- 1/newbugs$Var
