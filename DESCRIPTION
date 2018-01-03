@@ -11,9 +11,11 @@ Depends:
 Imports:
     Matrix,
     ggplot2,
-    reshape2,
+    reshape,
     stats
 Suggests: 
+    captioner,
+    stringr,
     lme4,
     nlme,
     predictmeans,
