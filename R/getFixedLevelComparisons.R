@@ -34,7 +34,7 @@
 #' # library(lme4)
 #' # fm <- lmer(yield ~ nitro*Variety+(1|Block/Variety), data=Oats)
 #'
-#' pm <- predictmeans(fm, "nitro:Variety", pairwise=TRUE)
+#' pm <- predictmeans(fm, "nitro:Variety", pairwise=TRUE, plot = FALSE)
 #' oats.tab <- makeSummaryTable(pm)
 #'
 #' rowsKeep <- getFixedLevelComparisons(oats.tab[,1], sepChar = ",")

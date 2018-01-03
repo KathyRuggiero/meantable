@@ -32,9 +32,8 @@
 #'
 #' library(lme4)
 #' fm <- lmer(yield ~ nitro*Variety+(1|Block/Variety), data=Oats)
-#' pm <- predictmeans(fm, "nitro:Variety", pairwise=TRUE)
+#' pm <- predictmeans(fm, "nitro:Variety", pairwise=TRUE, plot = FALSE)
 #' makeComparisonNames(pm$"Pairwise p-values")
-
 
 makeComparisonNames <- function(mat){
 

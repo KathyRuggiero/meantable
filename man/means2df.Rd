@@ -30,7 +30,7 @@ designs or weighted least squares analysis.
 }
 \details{
 This function assumes that the list supplied to the \code{data} argument was generated
-by the \link{predictmeans} function in the \code{predictmeans} package.
+by the \link[predictmeans]{predictmeans} function in the \code{predictmeans} package.
 }
 \examples{
 data(fruitfly)
