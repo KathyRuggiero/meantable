@@ -9,7 +9,7 @@ output:
     keep_md: true
     toc_depth: 3
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{meantable}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -146,7 +146,10 @@ This vignette navigates the `meantable` workflow, from exploring data via boxplo
 
 
 ```{r, echo=FALSE, message=FALSE}
-library(ruggi)
+library(meantable)
+library(predictmeans)
+library(ggplot2)
+library(reshape)
 ```
 
 ##  Longevity of the male fruitfly
