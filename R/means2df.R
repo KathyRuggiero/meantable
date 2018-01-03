@@ -20,6 +20,7 @@
 #' by the \link[predictmeans]{predictmeans} function in the \code{predictmeans} package.
 #' @export
 #' @examples
+#' library(predictmeans)
 #' data(fruitfly)
 #' # fit model for factorial experiment with added control
 #' newfruitfly <- toFactor(fruitfly, variables = c("ID", "Partners", "Type"))

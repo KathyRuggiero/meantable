@@ -33,6 +33,7 @@ This function assumes that the list supplied to the \code{data} argument was gen
 by the \link[predictmeans]{predictmeans} function in the \code{predictmeans} package.
 }
 \examples{
+library(predictmeans)
 data(fruitfly)
 # fit model for factorial experiment with added control
 newfruitfly <- toFactor(fruitfly, variables = c("ID", "Partners", "Type"))
