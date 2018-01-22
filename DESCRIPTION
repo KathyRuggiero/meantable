@@ -5,6 +5,11 @@ Version: 0.1
 Date: 2016-03-17
 Author: Kathy Ruggiero
 Maintainer: Kathy Ruggiero <k.ruggiero@auckland.ac.nz>
+Title: Handy Functions for Manipulating, Summarising and Plotting Data
+Version: 0.0.999
+Date: 2018-01-04
+Authors@R: person("Kathy", "Ruggiero", 
+    email = "k.ruggiero@auckland.ac.nz", role = c("aut", "cre"))
 Description: Handy functions for manipulating, summarising and plotting data.
 Depends:
     R (>= 3.0.1),
