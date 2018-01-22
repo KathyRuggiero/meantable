@@ -9,8 +9,8 @@
 #' This function computes the mean and standard error of the observations in a vector.
 #' NAs are removed before the calculations are performed.
 #' @seealso \code{\link{mean}}, \code{\link{sd}}
+#' @importFrom stats sd
 #' @export
-
 
 meanse <- function(x){
 

@@ -35,13 +35,14 @@
 #' @param yStripTextSize y strip text size in pts
 #' @param legendKeyWidth width of legend key in cms
 #'
+#' @importFrom stats reformulate
+#' @importFrom ggplot2 aes_string element_blank element_text facet_grid
+#'             geom_line geom_point ggplot scale_x_continuous theme theme_bw
+#'             unit xlab ylab
 #' @export
-#' @importFrom nlme lme
-#' @importFrom lme4 lmer
-#' @importFrom predictmeans predictmeans
-#' @importFrom reshape melt
 #' @examples
 #' #' # fruitfly data: factorial with added control
+#' library(predictmeans)
 #' data(fruitfly)
 #' # -- set up factors
 #' newfruitfly <- transform(fruitfly, Type = factor(Type, levels=c(9,0,1),
@@ -99,7 +100,7 @@
 #'
 #' # -- get weights
 #' var.mat <- with(bugs, tapply(logBaseline, list(State, Bacteria), var))
-#' var.df <- melt(var.mat)
+#' var.df <- reshape::melt(var.mat)
 #' names(var.df) <- c("State", "Bacteria", "Var")
 #' newbugs <- merge(bugs, var.df)
 #' newbugs$Weight <- 1/newbugs$Var
@@ -169,6 +170,7 @@
 #'                             lsdVar = "LSD_avg", edgeWidth = 0.05)
 #'
 #' # plot means with LSD bars, facetting by Bacteria and State
+#' library(ggplot2)
 #' meansLSDplot(lsdList = newBugs.list, x = "Time", y = "Mean", facets = c("Bacteria","State"),
 #'              xLabel = "Time (hours)", yLabel = "Predicted mean",
 #'              tickMarkLabelSize = 11, xTickLabelAngle = 90) +

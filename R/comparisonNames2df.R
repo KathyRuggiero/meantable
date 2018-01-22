@@ -36,7 +36,7 @@
 #' \code{Fac22} respectively. Replacing the \code{Comparison} column in the summary table produced
 #' by \code{makeSummaryTable} facilitates reordering and/or subsetting the summary table.
 #'
-#' @seealso \code{\link[ruggi]{makeComparisonNames}}
+#' @seealso \code{\link[meantable]{makeComparisonNames}}
 #' @export
 #' @examples
 #' library(predictmeans)

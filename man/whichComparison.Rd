@@ -52,11 +52,11 @@ keeprows <- whichComparison(compNames.df, contrFactor="nitro")
 newoats.tab[keeprows,]
 }
 \seealso{
-\code{\link[ruggi]{makeComparisonNames}}
+\code{\link[meantable]{makeComparisonNames}}
 
-\code{\link[ruggi]{makeSummaryTable}}
+\code{\link[meantable]{makeSummaryTable}}
 
-\code{\link[ruggi]{comparisonNames2df}}
+\code{\link[meantable]{comparisonNames2df}}
 }
 \author{
 Katya Ruggiero

@@ -32,9 +32,10 @@
 #' or a pair of factors.
 #' @seealso \code{\link[ggplot2]{ggplot}} \code{\link[ggplot2]{aes_string}} \code{\link[ggplot2]{facet_wrap}}
 #' @export
-#' @import ggplot2
+#' @importFrom stats reformulate
+#' @importFrom ggplot2 aes_string element_text facet_grid geom_boxplot
+#'                     ggplot theme theme_bw xlab ylab
 #' @examples
-#' library(ggplot2)
 #'
 #' # With default axis and tick mark label font sizes
 #' data(crdData)

@@ -87,6 +87,7 @@ or a pair of factors.
 }
 \examples{
 library(ggplot2)
+library(predictmeans)
 # Means with 95\% CI error bars
 data(crdData)
 crd.lm <- lm(logAUC ~ Surgery, data = crdData)

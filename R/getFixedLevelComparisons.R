@@ -21,8 +21,9 @@
 #' comparisons which differ by exactly one factor level.
 #'
 #' @seealso \code{\link[predictmeans]{predictmeans}}
-#' @seealso \code{\link[ruggi]{makeSummaryTable}}
-#' @seealso \code{\link[ruggi]{makeComparisonNames}}
+#' @seealso \code{\link[meantable]{makeSummaryTable}}
+#' @seealso \code{\link[meantable]{makeComparisonNames}}
+#' @importFrom Matrix diag
 #' @export
 #' @examples
 #' library(predictmeans)
@@ -33,7 +34,7 @@
 #' # library(lme4)
 #' # fm <- lmer(yield ~ nitro*Variety+(1|Block/Variety), data=Oats)
 #'
-#' pm <- predictmeans(fm, "nitro:Variety", pairwise=TRUE)
+#' pm <- predictmeans(fm, "nitro:Variety", pairwise=TRUE, plot = FALSE)
 #' oats.tab <- makeSummaryTable(pm)
 #'
 #' rowsKeep <- getFixedLevelComparisons(oats.tab[,1], sepChar = ",")

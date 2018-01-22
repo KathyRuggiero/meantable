@@ -55,9 +55,6 @@
 #' to plotted panel defined by row and/or column facetting variables. Examples are presented below.
 #'
 #' @export
-#' @importFrom nlme lme
-#' @importFrom lme4 lmer
-#' @importFrom predictmeans predictmeans
 #' @importFrom reshape melt
 #' @examples
 #' library(nlme)

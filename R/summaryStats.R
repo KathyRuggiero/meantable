@@ -1,3 +1,4 @@
+#' @importFrom stats sd median
 summaryStats <- function(x){
 
   missing <- sum(is.na(x))

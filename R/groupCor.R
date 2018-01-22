@@ -20,6 +20,7 @@
 #' of the number of levels in each group variable and \eqn{c} is the sum of the number of variables
 #' in \code{factors} and \code{choose(length(measure.vars), 2)}, i.e. the number of pairwise
 #' correlations that can be computed from the set of measurement variables.
+#' @importFrom stats cor
 #' @export
 #' @examples
 #' data(fruitfly)
