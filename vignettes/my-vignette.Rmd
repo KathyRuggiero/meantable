@@ -9,7 +9,7 @@ output:
     keep_md: true
     toc_depth: 3
 vignette: >
-  %\VignetteIndexEntry{meantable}
+  %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -147,9 +147,6 @@ This vignette navigates the `meantable` workflow, from exploring data via boxplo
 
 ```{r, echo=FALSE, message=FALSE}
 library(meantable)
-library(predictmeans)
-library(ggplot2)
-library(reshape)
 ```
 
 ##  Longevity of the male fruitfly
@@ -396,8 +393,7 @@ fruitfly.pm$"Pairwise p-value"
 
 <br>
 
-For a small experiment such as this, reading the contents of the two matrices is easy. Larger experiments (i.e. more factors, or factors with with more than a couple of levels each), however, result in much larger matrices so that extracting the relevant results becomes a laborious task. 
-The `makeSummaryTable()` automates this task, collating and storing the relevant information in a single dataframe, i.e. 
+For a small experiment such as this, reading the contents of the two matrices is easy. However,  larger experiments (i.e. more factors and/or factors comprising more than just a couple of levels each) yield much larger matrices, making the task of extracting the relevant results a much more laborious and time-consuming task. We will see this later when we encounter the bugs [KR: Add LINK to bugs] data. The `makeSummaryTable()` function was developed to automate this task, collating and storing the relevant information in a single dataframe, i.e. 
 
 ```{r}
 fruitfly.tab <- makeSummaryTable(fruitfly.pm)
@@ -490,16 +486,28 @@ confintplot(fruitfly.tab2, y="Difference", x = "Comparison", facets = c("Control
 
 <br>
 
-To generate the plot shown in `r f.ref("flyCIplotByFactor")` we must first disaggregate the comparison names into their original factor-level names. This task is performed by the  `comparisonNames2df()` function which operates on the vector of `Comparison` names. It returns a dataframe comprising $2n$ columns, where $n$ is the number of factors in the `modelterm` argument supplied to `predictmeans()`. In the case of the fruitfly data, the value supplied to the `modelterm` argument was `"Control:Partners:Type"` ([see code](#fruitfly-pm) used to calculate predicted means). Each column is given the corresponding factor's name with either a <tt>1</tt> or <tt>2</tt> concatenated at the end depending on whether the factor-level contributed to <tt>Treatment1</tt> or <tt>Treatment2</tt>, i.e. 
-
-We insert a copy of the `Control1` factor (first column in the above table) into the `fruitfly.tab2` dataframe, so that we may use it as a facet variable in our plot. Before generating the plot, however, we will relabel the `Yes` and `No` values of `Control1` with `Celebate` and `Active` respectively.
-
-
-We now use our previously stored reduced set of comparison names, stored in `fruitflyCompNames`, to create a new column (see , i.e.
+To generate the plot shown in `r f.ref("flyCIplotByFactor")` we must first disaggregate the comparison names into their original factor-level names. This task is performed by the  `comparisonNames2df()` function which operates on a character vector of comparison names. To illustrate, consider the reduced set of comparison names we earlier stored in `fruitflyCompNames`, i.e.
 
 ```{r}
 fruitflyCompNames
 ```
+
+We want to *split* these comparison names at the colon (:)
+```{r}
+disaggNames.df <- comparisonNames2df(fruitflyCompNames, split.at = ":",
+                                     varNames = c("Control", "Partners", "Type"))
+```
+
+It returns a dataframe comprising $2n$ columns, where $n$ is the number of factors in the `modelterm` argument supplied to `predictmeans()`. In the case of the fruitfly data, the value supplied to the `modelterm` argument was `"Control:Partners:Type"` ([see code](#fruitfly-pm) used to calculate predicted means). 
+
+```{r}
+head(disaggNames.df)
+```
+
+
+We insert a copy of the `Control1` factor (first column in the above table) into the `fruitfly.tab2` dataframe, so that we may use it as a facet variable in our plot. Before generating the plot, however, we will relabel the `Yes` and `No` values of `Control1` with `Celebate` and `Active` respectively.
+
+
 ```{r}
 disaggNames.df <- comparisonNames2df(fruitflyCompNames, split.at = ":",
                                      varNames = c("Control", "Partners", "Type"))
