@@ -1,32 +1,28 @@
 Package: meantable
 Type: Package
-Title: Handy functions
-Version: 0.1
-Date: 2016-03-17
-Author: Kathy Ruggiero
-Maintainer: Kathy Ruggiero <k.ruggiero@auckland.ac.nz>
-Title: Handy Functions for Manipulating, Summarising and Plotting Data
-Version: 0.0.999
-Date: 2018-01-04
+Title: Handy functions for manipulating, summarising and plotting data
+Version: 0.0.900
+Date: 2018-01-22
 Authors@R: person("Kathy", "Ruggiero", 
     email = "k.ruggiero@auckland.ac.nz", role = c("aut", "cre"))
-Description: Handy functions for manipulating, summarising and plotting data.
+Description: Handy Functions for Manipulating, Summarising and Plotting Data.
 Depends:
-    R (>= 3.0.1),
-    ggplot2,
-    predictmeans,
-    reshape
+    R (>= 3.4.2)
 Imports:
-    grid,
+    Matrix,
+    ggplot2,
+    reshape,
+    stats
+Suggests: 
+    captioner,
+    stringr,
     lme4,
     nlme,
-    stats
+    predictmeans,
+    knitr,
+    kableExtra,
+    rmarkdown
 License: GPL-3
 LazyData: FALSE
 RoxygenNote: 6.0.1
-Suggests: knitr,
-    rmarkdown,
-    kableExtra,
-    stringr,
-    captioner
 VignetteBuilder: knitr
